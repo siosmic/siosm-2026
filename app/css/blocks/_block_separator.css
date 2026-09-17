@@ -1,0 +1,11 @@
+.wp-block-separator{
+    @apply my-4;
+
+	&:not(.is-style-wide):not(.is-style-dots){
+		@apply w-full border-b-[1px] border-b-black/20;
+	}
+
+    &.has-background:not(.is-style-dots){
+        @apply h-[1px] opacity-100;
+    }
+}

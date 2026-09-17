@@ -1,0 +1,18 @@
+.wp-block-columns {
+  @apply gap-4 lg:gap-8;
+
+  .wp-block-column {
+    &.has-background {
+      @apply z-0 rounded-lg p-4 lg:p-8;
+    }
+    /* lg */
+    @media (max-width: 1024px) {
+      &[style*="flex-basis:50%"] {
+        flex-basis: 75% !important;
+      }
+      &[style*="flex-basis:60%"] {
+        flex-basis: 80% !important;
+      }
+    }
+  }
+}

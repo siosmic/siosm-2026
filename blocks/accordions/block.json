@@ -1,0 +1,18 @@
+{
+    "name": "accordions",
+    "title": "Accordions",
+    "description": "Accordions",
+    "category": "formatting",
+    "icon": "image-flip-vertical",
+    "keywords": ["testimonial"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "accordions.php"
+    },
+    "supports": {
+        "align": false,
+        "anchor": true,
+        "customClassName": true,
+        "jsx": true
+    }
+}

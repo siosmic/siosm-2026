@@ -1,0 +1,189 @@
+body.user-registration-membership_page_user-registration-login-forms,
+body.user-registration-page {
+  #user-registration:not(.user-registration-MyAccount),
+  .user-registration:not(.user-registration-MyAccount) {
+    div.ur-frontend-form.login {
+      @apply p-0 shadow-none;
+    }
+  }
+}
+
+/* Change border color */
+body
+  #user-registration.horizontal
+  .user-registration-MyAccount-navigation-link.is-active
+  a {
+  @apply border-primary;
+}
+
+/* Change text color */
+body.user-registration-membership_page_user-registration-login-forms
+  #user-registration:not(.user-registration-MyAccount)
+  .ur-frontend-form
+  .user-registration-form
+  .ur-form-row
+  .ur-form-grid
+  .user-registration-before-login-btn
+  div.user-registration-LostPassword
+  a,
+body.user-registration-membership_page_user-registration-login-forms
+  .user-registration:not(.user-registration-MyAccount)
+  .ur-frontend-form
+  .user-registration-form
+  .ur-form-row
+  .ur-form-grid
+  .user-registration-before-login-btn
+  div.user-registration-LostPassword
+  a,
+body.user-registration-page
+  #user-registration:not(.user-registration-MyAccount)
+  .ur-frontend-form
+  .user-registration-form
+  .ur-form-row
+  .ur-form-grid
+  .user-registration-before-login-btn
+  div.user-registration-LostPassword
+  a,
+body.user-registration-page
+  .user-registration:not(.user-registration-MyAccount)
+  .ur-frontend-form
+  .user-registration-form
+  .ur-form-row
+  .ur-form-grid
+  .user-registration-before-login-btn
+  div.user-registration-LostPassword
+  a,
+body
+  #user-registration.horizontal
+  .user-registration-MyAccount-navigation-link
+  a:hover,
+body
+  #user-registration.horizontal
+  .user-registration-MyAccount-content__body
+  p
+  a,
+body #user-registration.vertical .user-registration-MyAccount-content__body p a,
+body
+  #user-registration.horizontal
+  .user-registration-MyAccount-navigation-link.is-active
+  a {
+  @apply text-primary;
+}
+
+body
+  #user-registration
+  .user-registration-MyAccount-content
+  .ur-frontend-form
+  .user-registration-EditProfileForm
+  .user-registration-profile-fields
+  > p
+  .user-registration-Button.button-primary {
+  @apply rounded-none border-none bg-primary;
+}
+
+/* Hover bg color change */
+body#user-registration
+  .user-registration-MyAccount-navigation
+  ul
+  .user-registration-MyAccount-navigation-link.is-active
+  a,
+body
+  #user-registration.horizontal
+  .user-registration-MyAccount-navigation
+  ul
+  .user-registration-MyAccount-navigation-link.is-active
+  a {
+  @apply bg-transparent;
+}
+
+/* Navi links in my account */
+body
+  #user-registration.horizontal
+  .user-registration-MyAccount-navigation-link
+  a:hover {
+  @apply border-primary bg-transparent;
+}
+
+/* Change bg color */
+body.user-registration-membership_page_user-registration-login-forms
+  #user-registration:not(.user-registration-MyAccount)
+  .ur-frontend-form
+  .user-registration-form
+  .ur-form-row
+  .ur-form-grid
+  > div
+  button.user-registration-Button,
+body.user-registration-membership_page_user-registration-login-forms
+  .user-registration:not(.user-registration-MyAccount)
+  .ur-frontend-form
+  .user-registration-form
+  .ur-form-row
+  .ur-form-grid
+  > div
+  button.user-registration-Button,
+body.user-registration-page
+  #user-registration:not(.user-registration-MyAccount)
+  .ur-frontend-form
+  .user-registration-form
+  .ur-form-row
+  .ur-form-grid
+  > div
+  button.user-registration-Button,
+body.user-registration-page
+  .user-registration:not(.user-registration-MyAccount)
+  .ur-frontend-form
+  .user-registration-form
+  .ur-form-row
+  .ur-form-grid
+  > div
+  button.user-registration-Button,
+body
+  #user-registration.horizontal
+  .user-registration-MyAccount-content__body
+  .ur-frontend-form.login
+  .ur-form-row
+  .ur-form-grid
+  > p
+  button.user-registration-Button.button,
+body
+  #user-registration.vertical
+  .user-registration-MyAccount-content__body
+  .ur-frontend-form.login
+  .ur-form-row
+  .ur-form-grid
+  > p
+  button.user-registration-Button.button,
+body.user-registration-membership_page_user-registration-login-forms
+  #user-registration:not(.user-registration-MyAccount)
+  .ur-button-container
+  button.ur-submit-button,
+body.user-registration-membership_page_user-registration-login-forms
+  .user-registration:not(.user-registration-MyAccount)
+  .ur-button-container
+  button.ur-submit-button,
+body.user-registration-page
+  #user-registration:not(.user-registration-MyAccount)
+  .ur-button-container
+  button.ur-submit-button,
+body.user-registration-page
+  .user-registration:not(.user-registration-MyAccount)
+  .ur-button-container
+  button.ur-submit-button {
+  @apply border-primary bg-primary;
+}
+
+/* Buttons */
+body.user-registration-page,
+body.user-registration-membership_page_user-registration-login-forms {
+  #user-registration:not(.user-registration-MyAccount),
+  .user-registration:not(.user-registration-MyAccount) {
+    .ur-frontend-form
+      .user-registration-form
+      .ur-form-row
+      .ur-form-grid
+      > div
+      button.user-registration-Button:hover {
+      @apply bg-secondary;
+    }
+  }
+}

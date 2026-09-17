@@ -1,0 +1,20 @@
+.wp-block-cover {
+  @apply mb-10 min-h-[320px] md:min-h-[430px];
+
+  .wp-block-cover__inner-container {
+    @apply container;
+  }
+
+  &:not(.alignfull) {
+    @apply overflow-hidden;
+  }
+
+  @media (max-width: 1024px) {
+    &[style*="min-height:400px;"] {
+      min-height: 250px !important;
+    }
+    &[style*="min-height:250px;"] {
+      min-height: 150px !important;
+    }
+  }
+}

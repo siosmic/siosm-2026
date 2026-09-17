@@ -1,0 +1,19 @@
+.wp-block-list {
+  @apply flex flex-col gap-y-4;
+
+  li {
+    @apply leading-tight;
+    > a {
+      @apply relative inline-flex transition-all duration-300 hover:pl-4;
+
+      &::after {
+        @apply absolute -left-4 top-0 flex h-4 w-4 items-center justify-center opacity-0 transition-all duration-300 content-['→'];
+      }
+      &:hover {
+        &::after {
+          @apply -left-1 opacity-100;
+        }
+      }
+    }
+  }
+}

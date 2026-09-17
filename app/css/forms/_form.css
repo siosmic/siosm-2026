@@ -1,0 +1,45 @@
+body,
+body .acf-field,
+body .ur-frontend-form .ur-form-row .ur-form-grid .user-registration-form-row {
+	.gform_legacy_markup_wrapper
+		.ginput_full[data-payment-element="false"]
+		.StripeElement,
+	.gravity-theme .ginput_full[data-payment-element="false"] .StripeElement,
+	select,
+	textarea,
+	input[type="password"],
+	input[type="number"],
+	input[type="email"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="email"] {
+		@apply h-auto rounded-sm border-2 border-transparent bg-[rgba(200,200,200,0.35)] p-4 leading-normal text-black outline-none ring-0;
+		&::placeholder {
+			@apply text-black/30;
+		}
+		&:focus {
+			@apply border-black/20 outline-none ring-0;
+		}
+	}
+
+	input[type="submit"] {
+		@apply relative mb-4 inline-flex w-full cursor-pointer rounded-none border border-primary bg-primary py-6 pb-2 pt-3 text-sm font-bold uppercase leading-[24px] tracking-[0.15em] text-white transition-all duration-300 sm:w-auto lg:px-7 lg:pb-4 lg:pt-[22px];
+	}
+
+	/* Adapt field bg-color on specific background */
+	.wp-block-group.has-gray-light-background-color,
+	.wp-block-column.has-gray-light-background-color {
+		select,
+		textarea,
+		input[type="password"],
+		input[type="number"],
+		input[type="email"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="text"],
+		input[type="email"] {
+			@apply bg-white;
+		}
+	}
+}

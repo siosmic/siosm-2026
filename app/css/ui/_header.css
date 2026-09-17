@@ -1,0 +1,97 @@
+header {
+  /* Menu */
+  ul.menu,
+  ul.sub-menu {
+    li.menu-item {
+      a {
+        @apply text-gray-medium hover:text-primary;
+        &::after {
+          @apply bg-primary;
+        }
+      }
+      &.current-menu-item a {
+        @apply text-primary;
+        &::after {
+          @apply w-full;
+        }
+      }
+    }
+  }
+
+  /* Burger menu */
+  .burger-menu > span {
+    @apply bg-primary;
+  }
+
+  &.scrolled {
+    @apply shadow-lg;
+
+    /* Logo */
+    svg#logo {
+      @apply h-auto w-[120px];
+
+      path,
+      rect,
+      polygon,
+      ellipse {
+        @apply fill-primary;
+      }
+      g#texte {
+      }
+    }
+  }
+}
+
+/* MENU */
+ul.menu,
+ul.sub-menu {
+  li.menu-item {
+    a {
+      @apply relative inline-flex py-2 font-medium;
+      &:hover {
+        @apply text-inherit;
+      }
+    }
+  }
+}
+
+/* DROPDOWN MENU */
+ul.menu.dropdown {
+  /* Has submenu */
+  li.menu-item.menu-item-has-children {
+    position: relative;
+    display: inline-flex;
+    padding-right: calc(25px + 0.5rem);
+    &::after {
+      @apply absolute right-0 inline-flex h-[25px] w-[25px] items-center justify-center antialiased;
+      font: var(--fa-font-solid);
+      font-weight: 400;
+      content: "\f078";
+    }
+    &:hover {
+      ul.sub-menu {
+        @apply max-h-96 shadow-xl;
+      }
+    }
+  }
+
+  ul.sub-menu {
+    @apply absolute left-0 top-full max-h-0 overflow-hidden border-t-0 border-transparent bg-white py-0 transition-all duration-300;
+    li.menu-item {
+      @apply mr-0  py-0 text-black;
+      a {
+        @apply block whitespace-nowrap px-6 py-3 hover:text-primary;
+      }
+    }
+  }
+}
+
+/* Burger menu */
+.burger-menu,
+.burger-menu-mobile {
+  @apply flex h-11 w-11 cursor-pointer flex-col items-center justify-center gap-y-[6px] transition-all duration-200;
+
+  span {
+    @apply h-[3px] w-7 transition-all duration-200 ease-out;
+  }
+}

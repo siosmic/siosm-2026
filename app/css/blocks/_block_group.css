@@ -1,0 +1,12 @@
+.wp-block-group {
+  &.has-background {
+    @apply z-0;
+
+    &.is-style-no-padding {
+      @apply p-0;
+    }
+    &.is-style-mini-padding {
+      @apply p-4;
+    }
+  }
+}

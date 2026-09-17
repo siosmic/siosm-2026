@@ -1,0 +1,59 @@
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "ui/_general.css";
+@import "ui/_offcanvas.css";
+@import "ui/_fonts.css";
+@import "ui/_header.css";
+@import "ui/_footer.css";
+@import "ui/_buttons.css";
+@import "blocks/_block_separator.css";
+@import "blocks/_block_gallery.css";
+
+html :where(.editor-styles-wrapper) {
+  font-family: sans-serif;
+}
+.editor-styles-wrapper {
+  @apply relative;
+}
+.acf-block-preview {
+  a {
+    text-decoration: none;
+  }
+}
+
+.wp-block-cover {
+  .wp-block-cover__inner-container {
+    @apply max-w-screen-lg;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply w-full;
+    }
+  }
+}
+
+.wp-block-group {
+  border: 1px solid rgba(240, 240, 240, 1) !important;
+  @apply m-2 p-2;
+}
+.block-library-spacer__resize-container {
+  background: rgba(gray, 0.5);
+}
+
+.wp-block-spacer {
+  background-color: rgba(240, 240, 240, 1);
+}
+
+.wp-block-columns {
+  @apply gap-4 border-2 border-dotted border-black/10 bg-gray-50/30 p-2;
+
+  .wp-block-column {
+    @apply border-2 border-dotted border-black/10 bg-gray-50/30 p-2;
+  }
+}

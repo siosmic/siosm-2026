@@ -1,0 +1,47 @@
+.alignfull {
+	@apply mx-[calc(calc(50%_-_50vw))] w-screen;
+
+	> * {
+		@apply sm:px-0 px-8
+	}
+}
+
+/* Fixing content max-width in an alignfull container */
+.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){
+	@apply xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm;
+}
+
+
+.alignnone {
+	@apply h-auto max-w-full mx-0;
+}
+
+
+@media (max-width: 781px) {
+    .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+        flex-basis: 0 !important;
+    }
+}
+@media (max-width: 768px) {
+    .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+        flex-basis: 100% !important;
+    }
+}
+.wp-block-group {
+	.wp-block-columns {
+		&.alignwide {
+			@apply mx-auto;
+		}
+	}
+}
+.wp-block-group.alignfull.has-background {
+	@apply px-0;
+}
+
+/* .alignfull{
+    .wp-block-column{
+        h1,h2,h3,h4,h5,p{
+            @apply px-3 md:px-0;
+        }
+    }
+} */

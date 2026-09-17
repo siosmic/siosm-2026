@@ -1,0 +1,91 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-[0.5em] font-bold;
+
+  &.is-style-no-margin {
+    @apply mb-0;
+  }
+}
+
+h1 {
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+
+div:not(.has-text-color) {
+  > p {
+    @apply text-gray-medium;
+  }
+}
+p {
+  @apply mb-2 leading-snug md:mb-4;
+
+  > a {
+    @apply relative inline-flex text-black underline underline-offset-4 transition-all duration-300;
+  }
+
+  /* Small font size */
+  &.has-small-font-size {
+    line-height: 1.4em;
+  }
+
+  /* No margin */
+  &.is-style-no-margin {
+    @apply mb-0;
+  }
+
+  /* Arrow link */
+  &.is-style-arrow-link {
+    > a {
+      @apply relative pr-12 no-underline;
+      &::after {
+        content: url('data:image/svg+xml,<svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.1666 24.8332L24.8333 13.1665M24.8333 13.1665H13.1666M24.8333 13.1665V24.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19.5" cy="19.5" r="18.5" stroke="white" stroke-width="2"/></svg>');
+        @apply absolute -bottom-[11px] right-0 h-[39px] w-[39px] origin-center transition-all duration-300;
+      }
+      &:hover {
+        &::after {
+          @apply rotate-45;
+        }
+      }
+    }
+  }
+
+  /* Fancy link */
+  &.is-style-fancy-link {
+    @apply leading-tight;
+    > a {
+      @apply relative inline-flex text-sm uppercase tracking-[0.15em] transition-all duration-300 hover:pl-4;
+
+      &::after {
+        @apply absolute -left-5 -top-[1px] flex h-5 w-5 items-center justify-center opacity-0 transition-all duration-300 content-['→'];
+      }
+      &:hover {
+        &::after {
+          @apply -left-1 opacity-100;
+        }
+      }
+    }
+
+    &:not(.has-text-color) > a {
+      @apply text-primary;
+    }
+  }
+}
+
+a {
+  &:hover {
+    @apply text-primary;
+  }
+}

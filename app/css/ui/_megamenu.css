@@ -1,0 +1,95 @@
+/* Desktop Header Navigation */
+header {
+  position: relative;
+}
+
+/* Menu items */
+header ul.menu.dropdown {
+  li.menu-item.menu-item-megamenu {
+    padding-right: 0 !important;
+
+    /* Hide default font-awesome chevron from _header.css */
+    &::after {
+      display: none !important;
+    }
+
+    /* Lucide chevron-down on the link */
+    > a {
+      @apply relative inline-flex items-center pr-6;
+
+      &::after {
+        content: "";
+        font-family: inherit;
+        @apply pointer-events-none absolute right-0 top-1/2 h-5 w-5 -translate-y-1/2 bg-current transition-transform duration-200 ease-in-out;
+        -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+          no-repeat center / contain;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+          no-repeat center / contain;
+      }
+    }
+
+    /* Rotate chevron when hovered or active */
+    &:hover > a::after,
+    &.is-active > a::after {
+      @apply -translate-y-1/2 rotate-180;
+    }
+
+    /* Active link color */
+    &.is-active > a {
+      color: var(--wp--preset--color--primary, #da291c);
+    }
+  }
+}
+
+/* Desktop Mega menu panel placed outside/after </header> */
+.megamenu-panel:not(#offcanvas-menu .megamenu-panel) {
+  @apply pointer-events-none invisible fixed left-0 right-0 w-full cursor-default border-t border-gray-100 bg-white text-black opacity-0 shadow-2xl;
+  top: var(--header-height, 75px);
+  z-index: 10;
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.25s ease-out, visibility 0.25s ease-out;
+
+  /* When opened via hover or JS controller */
+  &.is-open {
+    @apply pointer-events-auto visible opacity-100;
+    transform: translateY(0);
+  }
+
+  /* Styling inside the dynamic block */
+  a {
+    @apply inline-block font-normal hover:text-primary;
+  }
+
+  p {
+    @apply mb-4 text-gray-600 last:mb-0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mb-3 font-semibold text-gray-900;
+  }
+
+  ul:not(.menu) {
+    @apply m-0 list-none space-y-2 p-0;
+  }
+}
+
+/* Mobile & Offcanvas Navigation */
+#offcanvas-menu {
+  li.menu-item.menu-item-megamenu {
+    @apply relative;
+
+    .megamenu-panel {
+      @apply invisible static hidden w-full translate-y-0 border-none bg-transparent py-2 opacity-0 shadow-none transition-none;
+    }
+
+    &.open > .megamenu-panel {
+      @apply pointer-events-auto visible block opacity-100;
+    }
+  }
+}

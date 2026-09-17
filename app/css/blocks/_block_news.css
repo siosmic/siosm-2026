@@ -1,0 +1,13 @@
+.nav-arrows{
+   @apply flex items-center mx-4 gap-6;
+
+   .slick-arrow{
+      @apply relative w-auto h-6 transition-all duration-300 ease-out z-0;
+
+      &.slick-prev { @apply hover:-translate-x-2; }
+      &.slick-next { @apply hover:translate-x-2; }
+      &.slick-disabled{
+         @apply opacity-30 hover:translate-x-0;
+      }
+   }
+}

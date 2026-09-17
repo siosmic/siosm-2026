@@ -1,0 +1,67 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* UI */
+@import "ui/_general.css";
+@import "ui/_offcanvas.css";
+@import "ui/_liste-membre.css";
+@import "ui/_fonts.css";
+@import "ui/_header.css";
+@import "ui/_footer.css";
+@import "ui/_buttons.css";
+@import "ui/_megamenu.css";
+
+/* BLOCKS */
+@import "blocks/_block_general.css";
+@import "blocks/_block_separator.css";
+@import "blocks/_block_spacer.css";
+@import "blocks/_block_image.css";
+@import "blocks/_block_list.css";
+@import "blocks/_block_cover.css";
+@import "blocks/_block_columns.css";
+@import "blocks/_block_navigation.css";
+@import "blocks/_block_latest-posts.css";
+@import "blocks/_block_media-text.css";
+@import "blocks/_block_group.css";
+@import "blocks/_block_embed.css";
+@import "blocks/_block_gallery.css";
+@import "blocks/_block_gallery-lightbox.css";
+@import "blocks/_block_slider.css";
+@import "blocks/_block_news.css";
+
+/* PLUGINS */
+@import "plugins/user-registration.css";
+@import "plugins/acf.css";
+@import "plugins/gravityforms.css";
+
+/* FORMS */
+@import "forms/_form.css";
+@import "forms/_form_date.css";
+@import "forms/_form_radio.css";
+@import "forms/_form_checkboxes.css";
+@import "forms/_form_select.css";
+
+/* @layer utilities {
+  @font-face {
+    font-display: swap;
+    font-family: "Brown";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../app/fonts/Brown-Bold.woff2") format("woff2");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "Brown";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../app/fonts/Brown-Regular.woff2") format("woff2");
+  }
+} */
+
+/* Redefine default vars */
+:root {
+  --wp--style--gallery-gap-default: 1rem;
+  --gallery-block--gutter-size: 1rem;
+  --wp--style--block-gap: 1rem;
+}

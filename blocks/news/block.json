@@ -1,0 +1,12 @@
+{
+    "name": "display_news",
+    "title": "News",
+    "description": "Liste des dernières actualités",
+    "category": "formatting",
+    "icon": "schedule",
+    "keywords": ["testimonial"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "news.php"
+    }
+}

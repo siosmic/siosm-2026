@@ -1,0 +1,123 @@
+body {
+  /* Container styles */
+  .wp-block-buttons.is-layout-flex {
+    @apply gap-4;
+  }
+  .wp-block-buttons {
+    > .wp-block-button:last-of-type {
+      .wp-block-button__link {
+        @apply mb-0;
+      }
+    }
+  }
+
+  /* DEFAULT */
+  .modal-button,
+  .user-registration:not(.user-registration-MyAccount)
+    .ur-frontend-form
+    .user-registration-form
+    .ur-form-row
+    .ur-form-grid
+    > div
+    button.user-registration-Button,
+  .wp-block-button__link {
+    @apply relative inline-flex items-center justify-center gap-x-3 rounded-none border border-primary bg-primary pb-2.5 pt-3 text-sm font-bold uppercase leading-[24px] tracking-[0.15em] text-white transition-all duration-300;
+
+    &::after {
+      @apply absolute bottom-0 left-0 right-0 top-auto -z-10 mx-auto h-full w-full bg-primary transition-all duration-300 content-[''];
+    }
+
+    svg {
+      @apply -mt-1 h-5 w-5 transition-all duration-300;
+      path {
+        @apply transition-all duration-300;
+      }
+    }
+
+    &:hover {
+      @apply bg-transparent text-primary;
+
+      svg path {
+        @apply fill-primary;
+      }
+      &::after {
+        @apply top-0 h-0;
+      }
+    }
+
+    /* Has style fill-White */
+    &.has-white-background-color {
+      @apply border-white text-primary hover:text-white;
+      background-color: transparent !important;
+      &::after {
+        @apply bg-white;
+      }
+    }
+  }
+
+  /* OUTLINE */
+  .wp-block-button.is-style-outline > .wp-block-button__link,
+  .is-style-outline > .wp-block-button__link,
+  .wp-block-button__link.is-style-outline {
+    @apply bg-transparent text-primary;
+
+    &::after {
+      @apply h-0;
+    }
+    &:hover {
+      color: var(--wp--preset--color--white) !important;
+      &::after {
+        @apply h-full;
+      }
+    }
+
+    &:not(.has-text-color) {
+      @apply text-primary;
+    }
+
+    &.has-white-color {
+      @apply border-white;
+      &:hover {
+        @apply bg-white;
+        color: var(--wp--preset--color--primary) !important;
+      }
+    }
+  }
+
+  /* CUSTOM STYLES */
+  /* No margin */
+  .wp-block-button.is-style-no-margin > a.wp-block-button__link {
+    @apply mb-0;
+  }
+
+  /* Classic */
+  .is-style-classic.modal-button,
+  .wp-block-button.is-style-classic > .wp-block-button__link {
+    @apply border border-primary bg-primary;
+
+    &:hover {
+      @apply bg-white text-primary;
+    }
+  }
+
+  /* Medium */
+  .is-style-medium.modal-button,
+  .wp-block-button.is-style-medium > .wp-block-button__link {
+    @apply px-6 pb-3 pt-4 text-[13px];
+  }
+
+  /* Small */
+  .is-style-small.modal-button,
+  .wp-block-button.is-style-small > .wp-block-button__link {
+    @apply px-5 pb-2 pt-3 text-[12px];
+  }
+
+  /* Tiny */
+  .is-style-tiny.modal-button,
+  .wp-block-button.is-style-tiny > .wp-block-button__link {
+    @apply gap-x-2 px-4 pb-1 pt-2 text-[10px];
+    svg {
+      @apply h-4 w-4;
+    }
+  }
+}

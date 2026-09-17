@@ -1,0 +1,47 @@
+table#liste-membres {
+  @apply table-auto;
+
+  thead tr {
+    th {
+      @apply bg-black/15 px-4 pb-3 pt-4 text-left text-[12px] font-bold uppercase leading-none tracking-widest text-black/40;
+      &:first-child {
+        @apply rounded-l-lg;
+      }
+      &:last-child {
+        @apply rounded-r-lg;
+      }
+      &:nth-of-type(1) {
+        @apply w-[300px];
+      }
+    }
+  }
+
+  tbody tr {
+    td {
+      &:first-child {
+        @apply rounded-l-lg;
+      }
+      &:last-child {
+        @apply rounded-r-lg;
+      }
+    }
+    &:hover {
+      > td {
+        @apply bg-black/5;
+      }
+    }
+  }
+
+  th,
+  td {
+    @apply px-4 py-3 text-sm leading-tight transition-all duration-300;
+  }
+}
+
+#pagination {
+  @apply mt-4 flex w-full flex-row-reverse justify-between border-t border-t-black/20 pt-3;
+
+  button {
+    @apply hover:bg-secondary rounded-lg bg-primary px-5 pb-2 pt-3 text-[13px] font-bold uppercase tracking-widest text-white transition-all duration-300;
+  }
+}

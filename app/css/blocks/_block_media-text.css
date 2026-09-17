@@ -1,0 +1,16 @@
+.wp-block-media-text{
+
+   &.has-media-on-the-right{}
+   &.is-stacked-on-mobile{}
+   &.is-image-fill-element{}
+
+   /* Media */
+   .wp-block-media-text__media{
+      @apply rounded-lg overflow-hidden;
+   }
+
+   /* Content */
+   .wp-block-media-text__content{
+      @apply md:px-[8%] px-4;
+   }
+}

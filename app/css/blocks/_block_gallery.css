@@ -1,0 +1,3 @@
+body .wp-block-gallery {
+  @apply mb-4;
+}

@@ -1,0 +1,77 @@
+.gform_wrapper {
+	form {
+      @apply flex flex-col gap-y-6;
+
+		.gform_heading {
+			.gform_required_legend {
+				@apply hidden;
+			}
+		}
+		.gform_body {
+			.gform_fields {
+				@apply grid grid-cols-12 gap-6;
+
+				.gfield {
+					@apply col-span-12;
+
+					/* Input within */
+					input:not([type="radio"]):not([type="checkbox"]),
+					textarea {
+						@apply w-full;
+					}
+
+					/* Label */
+					legend.gfield_label,
+					label.gfield_label {
+						@apply inline-flex mb-2;
+					}
+
+					/* Description */
+					.gfield_description {
+						@apply text-[13px] text-black/40;
+					}
+
+					/* Hide Price on radio and checkboxes */
+					.ginput_price {
+						@apply hidden;
+					}
+
+					/* Set right width */
+					&.gfield--width-half,
+					&.gf_right_half,
+					&.gf_left_half {
+						@apply col-span-6;
+					}
+
+					.ginput_complex {
+						@apply flex gap-4;
+
+						div.clear-multi {
+							@apply flex w-full gap-4;
+						}
+
+						.gform-grid-col {
+							@apply grow basis-0;
+
+							&.gform-grid-col--size-auto {
+							}
+						}
+					}
+
+					/* Hidden label class */
+					&.hidden_label {
+						legend.gfield_label,
+						label.gfield_label {
+							@apply hidden;
+						}
+					}
+				}
+			}
+		}
+		.gform_footer {
+			input[type="submit"] {
+				@apply mb-0;
+			}
+		}
+	}
+}

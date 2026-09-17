@@ -1,0 +1,71 @@
+body .gform_wrapper.gravity-theme,
+body {
+	--radio_outer: 26px;
+	--radio_inner: 14px;
+	--radio_inner_placement: 6px;
+	--border_width: 2px;
+
+	/* GF RADIO */
+	.gfield_radio {
+		.gchoice {
+			@apply relative;
+		}
+		.gform-field-label h3 {
+			@apply mb-0 text-lg;
+		}
+	}
+
+	.gfield.gf_list_inline .gfield_radio {
+        @apply flex gap-x-6;
+		.gchoice label {
+			@apply max-w-[210px];
+		}
+	}
+
+	[type="radio"] {
+		@apply absolute -left-[9999px];
+	}
+	[type="radio"]:not(:checked) + label,
+	[type="radio"]:checked + label {
+		@apply relative mb-2 inline-flex cursor-pointer flex-wrap pt-[1px] text-base;
+		padding-left: calc(var(--radio_outer) + 0.3rem);
+		min-height: var(--radio_outer);
+
+		/* Badge background */
+		&::before {
+			@apply absolute left-0 top-0 rounded-full border-solid border-black bg-white content-[''];
+			border-width: var(--border_width);
+			width: var(--radio_outer);
+			height: var(--radio_outer);
+		}
+
+		/* Badge within */
+		&::after {
+			@apply absolute scale-0 rounded-full bg-primary
+            opacity-0 transition-all duration-300 content-[''];
+			width: var(--radio_inner);
+			height: var(--radio_inner);
+			top: var(--radio_inner_placement);
+			left: var(--radio_inner_placement);
+		}
+	}
+
+	/* Checked */
+	.facetwp-type-radio .facetwp-radio.checked,
+	[type="radio"]:checked + label {
+		&::before {
+			@apply border-primary;
+		}
+
+		&::after {
+			@apply scale-100 opacity-100;
+		}
+	}
+
+	.facetwp-type-radio {
+		@apply flex flex-col;
+		.facetwp-radio {
+			@apply bg-none;
+		}
+	}
+}

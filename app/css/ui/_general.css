@@ -1,0 +1,70 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body:not(.home) .entry-content {
+}
+body.admin-bar header {
+  @apply top-[32px];
+}
+details {
+  /* Is open */
+  &[open] {
+    summary {
+      svg {
+        @apply rotate-0;
+      }
+    }
+  }
+}
+
+/* CARD STYLE */
+.card {
+  background-color: #f4f4f4;
+  padding: 2rem;
+}
+
+/* BREADCRUMB */
+.breadcrumbs {
+  a {
+    @apply transition-all hover:text-primary;
+  }
+
+  span.current-item {
+    @apply font-semibold;
+  }
+}
+
+/* MAP */
+.acf-map {
+  @apply w-full;
+
+  /* Fixes potential theme css conflict. */
+  img {
+    max-width: inherit !important;
+  }
+}
+
+/* Tabs / togglers */
+.tab {
+  input {
+    @apply absolute opacity-0;
+
+    &:checked {
+      + .tab-label {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      ~ .tab-content {
+        @apply overflow-visible py-4;
+        max-height: 1024px;
+      }
+    }
+  }
+
+  &-content {
+    @apply max-h-0 overflow-hidden px-4 transition-all duration-300;
+  }
+}
